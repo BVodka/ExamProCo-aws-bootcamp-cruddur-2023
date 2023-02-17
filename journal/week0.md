@@ -1,7 +1,5 @@
 # Week 0 — Billing and Architecture
-
-# Week 0 — Billing and Architecture
-#Required Homework
+# Required Homework
 
 ### Installed AWS CLI
 
