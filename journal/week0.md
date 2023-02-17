@@ -22,6 +22,9 @@ tasks:
       sudo ./aws/install
       cd $THEIA_WORKSPACE_ROOT
 ```
+#### AWS_CLI_AUTO
+
+![Created a budget for monthly expenditure](/assets/partial_help.JPG)
 
 ### Created a new User and Generated AWS Credentials
 
@@ -95,6 +98,8 @@ Get your AWS Account ID
 ```sh
 aws sts get-caller-identity --query Account --output text
 ```
+
+![Created a budget for monthly expenditure](/assets/get_identity.JPG)
 
 - Supply your AWS Account ID
 - Update the json files
