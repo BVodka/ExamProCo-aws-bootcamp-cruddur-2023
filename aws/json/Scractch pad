@@ -1,0 +1,19 @@
+aws budgets create-budget \
+    --account-id $AWS_ACCOUNT_ID \
+    --budget file://aws/json/budget.json \
+    --notifications-with-subscribers file://aws/json/budget-notifications-with-subscribers.json
+
+
+aws sns subscribe \
+    --topic-arn  "arn:aws:sns:eu-west-2:859544217448:billing-alarm"\
+    --protocol email \
+    --notification-endpoint=writerscornerng@email.com
+
+aws sns create-topic --name billing-alarm
+
+aws cloudwatch put-metric-alarm --cli-input-json file://aws/json/alarm_config.json
+
+-- Configure AWS CLI
+export AWS_ACCESS_KEY_ID=""
+export AWS_SECRET_ACCESS_KEY=""
+export AWS_DEFAULT_REGION="eu-west-2"
