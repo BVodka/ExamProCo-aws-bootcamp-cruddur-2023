@@ -1,11 +1,12 @@
 # Week 0 — Billing and Architecture
 
 # Week 0 — Billing and Architecture
+#Required Homework
 
 ### Installed AWS CLI
 
-- We are going to install the AWS CLI when our Gitpod enviroment lanuches.
-- We are are going to set AWS CLI to use partial autoprompt mode to make it easier to debug CLI commands.
+- Installed the AWS CLI via the Gitpod enviroment.
+- Setup AWS CLI to use partial autoprompt mode.
 - The bash commands we are using are the same as the [AWS CLI Install Instructions]https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
 
@@ -26,52 +27,37 @@ tasks:
 
 ### Created a new User and Generated AWS Credentials
 
-- Go to (IAM Users Console](https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/users) andrew create a new user
 - `Enable console access` for the user
-- Create a new `Admin` Group and apply `AdministratorAccess`
-- Create the user and go find and click into the user
-- Click on `Security Credentials` and `Create Access Key`
-- Choose AWS CLI Access
-- Download the CSV with the credentials
+- Create a new `Cloud Administrator` Group and applied `AdministratorAccess`
+- Create the a user ```cloud_user``` and assigned it to the Cloud Administrator group
+- Created Security credentials for the user and downloaded the .csv file
+
 
 ### Set Env Vars
 
-We will set these credentials for the current bash terminal
+I set up these credentials for the current bash terminal and persisted it afterwards. 
 ```
 export AWS_ACCESS_KEY_ID=""
 export AWS_SECRET_ACCESS_KEY=""
 export AWS_DEFAULT_REGION=us-east-1
 ```
 
-We'll tell Gitpod to remember these credentials if we relaunch our workspaces
 ```
 gp env AWS_ACCESS_KEY_ID=""
 gp env AWS_SECRET_ACCESS_KEY=""
 gp env AWS_DEFAULT_REGION=us-east-1
 ```
 
-### Check that the AWS CLI is working and you are the expected user
+### I verified that AWS CLI is working and I am the expected user using the command below
 
 ```sh
 aws sts get-caller-identity
 ```
 
-## Enable Billing 
-
-Turned on Billing Alerts to recieve alerts...
+## Enabled Billing and created billing alerts 
 
 
--  [Billing Page](https://console.aws.amazon.com/billing/)
-- Under `Billing Preferences` Choose `Receive Billing Alerts`
-- Save Preferences
-
-
-## Created a Billing Alarm
-
-### Create SNS Topic
-
-- The SNS topic is what will delivery us an alert when we get overbilled
-- [aws sns create-topic](https://docs.aws.amazon.com/cli/latest/reference/sns/create-topic.html)
+### Created SNS Topic
 
 ## SNS Topic
 ```sh
@@ -89,7 +75,7 @@ aws sns subscribe \
 
 Checked email and confirmed the subscription
 
-#### Create Alarm
+### Created Alarm
 
 - [aws cloudwatch put-metric-alarm](https://docs.aws.amazon.com/cli/latest/reference/cloudwatch/put-metric-alarm.html)
 - [Create an Alarm via AWS CLI](https://aws.amazon.com/premiumsupport/knowledge-center/cloudwatch-estimatedcharges-alarm/)
@@ -100,7 +86,7 @@ Checked email and confirmed the subscription
 aws cloudwatch put-metric-alarm --cli-input-json file://aws/json/alarm_config.json
 ```
 
-## Create an AWS Budget
+## Created an AWS Budget
 
 [aws budgets create-budget](https://docs.aws.amazon.com/cli/latest/reference/budgets/create-budget.html)
 
