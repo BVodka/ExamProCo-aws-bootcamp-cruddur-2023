@@ -105,5 +105,4 @@ aws budgets create-budget \
     --budget file://aws/json/budget.json \
     --notifications-with-subscribers file://aws/json/budget-notifications-with-subscribers.json
 ```
-### Link to Logical Diagram of the Crudder App
-https://lucid.app/lucidchart/ec7f7d0f-bdad-4ae3-ac43-79ed2cc61e09/edit?viewport_loc=-662%2C8%2C2594%2C1302%2C0_0&invitationId=inv_08a823df-0043-46fd-83bf-8a86cea7fc42
+[Link to Logical Diagram of the Crudder App](https://lucid.app/lucidchart/ec7f7d0f-bdad-4ae3-ac43-79ed2cc61e09/edit?viewport_loc=-662%2C8%2C2594%2C1302%2C0_0&invitationId=inv_08a823df-0043-46fd-83bf-8a86cea7fc42) 
