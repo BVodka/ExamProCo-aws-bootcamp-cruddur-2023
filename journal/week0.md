@@ -53,7 +53,9 @@ aws sts get-caller-identity
 ```
 
 ## Enabled Billing and created billing alerts 
-![Created a budget for monthly expenditure](assets/TrackCreditSpend.JPG)
+![Created a budget to track aws credit spend only](/assets/TrackCreditSpend.JPG)
+
+![Created a budget for monthly expenditure](/assets/monthly%20cost%20budget.JPG)
 
 ### Created SNS Topic
 
