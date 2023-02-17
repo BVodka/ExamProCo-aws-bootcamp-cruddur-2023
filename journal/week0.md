@@ -81,7 +81,7 @@ Checked email and confirmed the subscription
 aws cloudwatch put-metric-alarm --cli-input-json file://aws/json/alarm_config.json
 ```
 
-## Created an AWS Budget
+### Created an AWS Budget
 
 [aws budgets create-budget](https://docs.aws.amazon.com/cli/latest/reference/budgets/create-budget.html)
 
@@ -106,7 +106,9 @@ aws budgets create-budget \
     --budget file://aws/json/budget.json \
     --notifications-with-subscribers file://aws/json/budget-notifications-with-subscribers.json
 ```
-###Crudder App Logical Design
+### Crudder App Logical Design
 I had to improvise as I couldn't import the mommento svg file into Lucid , I used a place marker. 
-![Logical Design for crudder app](/assets/monthly%20cost%20budget.JPG)
+
+![Logical Design for crudder app](/assets/Logical%20Design%20Crudder%20App.JPG)
+
 [Link to Logical Diagram of the Crudder App](https://lucid.app/lucidchart/ec7f7d0f-bdad-4ae3-ac43-79ed2cc61e09/edit?viewport_loc=-662%2C8%2C2594%2C1302%2C0_0&invitationId=inv_08a823df-0043-46fd-83bf-8a86cea7fc42) 
